@@ -7,19 +7,10 @@ class Link{
 		iData = id;
 		next = null;
 	}
-	
 	public void displayLink(){//display data item
 		System.out.println(iData);
 	}
-	
-	public void displayList(){//display data item
-		Link current = first;
-		while(current != null){
-			current.displayLink();
-			current = current.next;
-		}
-		System.out.println(" ");
-	}
+
 	//insert first method
 	public void insertFirst(int id){
 		Link newLink  = new Link(id);
@@ -34,11 +25,11 @@ class Link{
 	}
 	
 	//displayList method
-	public Link deleteFirst(){
-		Link temp = first;
-		first = first.next;
-		return temp;		
+	public void displayList(){
+		Link current = first;
+		while(current !=  null){
+			current.displayDetails();
+			current = current.next();
+		}		
 	}
-	
-	
 }
