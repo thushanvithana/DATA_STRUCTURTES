@@ -12,11 +12,6 @@ class QueueX{
 		rear = -1;
 		nItems = 0; // number of items
 	}
-	
-	
-	
-	
-	
 	//INSERT items to queue
 	public void insert(int j){
 		if(rear == maxSize-1)
@@ -26,9 +21,6 @@ class QueueX{
 			nItems++;
 		}
 	}
-	
-	
-	
 	//REMOVE items from queue
 	public int remove(){
 		if(nItems == 0){ //check weather queue is empty
@@ -40,8 +32,6 @@ class QueueX{
 			return queArray[front++]; // access item and increment front
 		}
 	}
-	
-	
 	//PEAK items from queue
 	public int peakFront(){
 		if(nItems == 0){ //check weather queue is empty
@@ -52,11 +42,6 @@ class QueueX{
 			return queArray[front]; // access item
 		}
 	}
-	
-	
-	
-	
-	
 	//circular queue/////////
 	//insert
 	public void insert(int j){
