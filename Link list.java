@@ -1,5 +1,4 @@
 class Link{
-
 	public int iData;//data item
 	public Link next;//refernce to the next link
 	
@@ -10,7 +9,6 @@ class Link{
 	public void displayLink(){//display data item
 		System.out.println(iData);
 	}
-
 	//insert first method
 	public void insertFirst(int id){
 		Link newLink  = new Link(id);
@@ -23,7 +21,6 @@ class Link{
 		first = first.next;
 		return temp;		
 	}
-	
 	//displayList method
 	public void displayList(){
 		Link current = first;
@@ -32,4 +29,28 @@ class Link{
 			current = current.next();
 		}		
 	}
+	//delete Custom method
+	public Link deketeLink(String name){
+		Link current = first;
+		Link previous = first;
+		
+		if(current == null){
+			return null;//if the list is empty
+		}
+		while(!current.name.equals(name)){
+			previous = current;
+			current = current.next;
+			
+			if(current == null){
+				return null;//if there is no any element to be delete
+			}
+		}
+		if(current == first){  // remove current element and balance near elemnts
+			first = first.next;
+		}
+		else{
+			previous.next = current next;
+		}
+		return current; 
+	}	
 }
