@@ -33,4 +33,15 @@ class StackX{
 		else
 			return stacArray[top];
 	}
+	//print the stack elements
+	public void display(){
+		System.out.println("printing the stack elements");
+		
+		int i=top;
+		do{
+			System.out.println(stackArray[i] +" " );
+			i--;
+		}
+		while(i>0);
+	}
 }
