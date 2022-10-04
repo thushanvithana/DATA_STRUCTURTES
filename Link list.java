@@ -32,4 +32,13 @@ class Link{
 		first = first.next;
 		return temp;		
 	}
+	
+	//displayList method
+	public Link deleteFirst(){
+		Link temp = first;
+		first = first.next;
+		return temp;		
+	}
+	
+	
 }
