@@ -4,8 +4,7 @@ class Node
 	public double dData; //other data
 	public Node leftChild; // this node’s left child
 	public Node rightChild; //this node’s right child
-
-
+	
 	public void displayNode( ){
 		System.out.print(“{“);
 		System.out.print(iData);
@@ -14,13 +13,9 @@ class Node
 		System.out.print( “ } ”);
 	}
 }
- 
-
 //Tree class find method
 public Node find(int key){
-	
 	Node current = root;
-	
 	while(current.iData != key){
 		if(key <current.iData)
 			current = current.leftChild;
@@ -30,12 +25,9 @@ public Node find(int key){
 				return null;
 	}
 	return current;
-
 }
-
 //Trees insert method
 public void insert(int id , double dd){
-	
 	Node newNode = new Node();
 	newNode.iData = id;
 	newNode.dData = dd;
@@ -47,7 +39,6 @@ public void insert(int id , double dd){
 		Node parent = root;
 		while(true){
 			parent = current;
-			
 			if(id<current.iData){
 				current = current.leftChild;
 				if(current == null){
@@ -65,7 +56,6 @@ public void insert(int id , double dd){
 		}
 	}
 }
-
 //tree class INORDER traversing method
 private void inOrder(Node localroot){
 	if(localroot != null){
@@ -74,7 +64,6 @@ private void inOrder(Node localroot){
 		inOrder(localroot.rightChild);
 	}
 }
-
 //tree class PREORDER traversing method
 private void preOrder(Node localroot){
 	if(localroot != null){
@@ -83,7 +72,6 @@ private void preOrder(Node localroot){
 		preOrder(localroot.rightChild);
 	}
 }
-
 //tree class POSTORDER traversing method
 private void postOrder(Node localroot){
 	if(localroot != null){
