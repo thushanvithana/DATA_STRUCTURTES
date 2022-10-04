@@ -1,3 +1,5 @@
+
+//QUEUE/////QUEUE/////QUEUE/////QUEUE/////QUEUE/////QUEUE/////QUEUE//
 class QueueX{
 	private int maxSize;	// size of the array
 	private int[] queArray;
@@ -12,7 +14,7 @@ class QueueX{
 		rear = -1;
 		nItems = 0; // number of items
 	}
-	//INSERT items to queue
+	//insert method
 	public void insert(int j){
 		if(rear == maxSize-1)
 			System.out.println("Queue is full);
@@ -21,7 +23,7 @@ class QueueX{
 			nItems++;
 		}
 	}
-	//REMOVE items from queue
+	//remove method
 	public int remove(){
 		if(nItems == 0){ //check weather queue is empty
 			System.out.println("Queue is empty");
@@ -32,7 +34,7 @@ class QueueX{
 			return queArray[front++]; // access item and increment front
 		}
 	}
-	//PEAK items from queue
+	//peak method
 	public int peakFront(){
 		if(nItems == 0){ //check weather queue is empty
 			System.out.println("Queue is empty");
@@ -42,8 +44,7 @@ class QueueX{
 			return queArray[front]; // access item
 		}
 	}
-	//circular queue/////////
-	//insert
+	//insert//circular queue/////////
 	public void insert(int j){
 		if(nItems == maxSize){
 			System.out.println("Queue is full");
@@ -57,7 +58,7 @@ class QueueX{
 			nItems++;
 		}
 	}
-	//remove 
+	//remove//circular queue/////////
 	public void remove(){
 		if(nItems ==0){
 			Sysstem.out.println("Queue is empty");
