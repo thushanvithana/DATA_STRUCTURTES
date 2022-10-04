@@ -9,11 +9,6 @@ class StackX{
 		top = -1; //number of items
 			
 	}
-	
-	
-	
-	
-	
 	//push method
 	public void push(double j){
 		//check weather stack is full
@@ -38,8 +33,4 @@ class StackX{
 		else
 			return stacArray[top];
 	}
-	
-	
-	
-	
 }
