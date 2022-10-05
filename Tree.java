@@ -55,7 +55,25 @@ public void insert(int id , double dd){
 			}
 		}
 	}
+}			 
+//find minimum
+public Node minimum(){
+	Node current=root;
+	while(current.leftChild != null){
+		current = current.leftChild;
+	}
+	return current;
 }
+//find descOrder
+public descOrder(Node localRoot){
+	
+	if(localRoot != null){
+	
+		descOrder(localRoot.rightChild);
+		localRoot.displayNode();
+		descOrder(localRoot.leftChild);
+	}
+}				 			 
 //tree class INORDER traversing method
 private void inOrder(Node localroot){
 	if(localroot != null){
@@ -80,5 +98,5 @@ private void postOrder(Node localroot){
 		preOrder(localroot.rightChild);
 	}
 }
-
+				 
 
